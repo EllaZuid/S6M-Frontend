@@ -1,5 +1,3 @@
-import { NumberValueAccessor } from "@angular/forms";
-
 export class ScoreModel {
     oneHP!: number;
     oneHalfP!: number;
