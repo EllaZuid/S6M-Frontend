@@ -1,0 +1,23 @@
+<header></header>
+<body fxLayout="column" fxFlex="90" fxFlexOffset="5">
+  <br>
+  <img class="logo" src="../../../assets/dressuurpaard logo.jpg">
+  <h1>Maak een account</h1>
+  <div class="wrapper">
+    <form [formGroup]="registerForm" (ngSubmit)="register()" class="wrapper">
+      <mat-form-field class="example-full-width">
+        <input matInput name="name" formControlName="uname" placeholder="Gebruikersnaam" required>
+      </mat-form-field>
+      <br/>
+      <mat-form-field class="example-full-width">
+        <input matInput type="password" name="password" formControlName="password" placeholder="Wachtwoord" required>
+      </mat-form-field>
+      <br>
+      <mat-form-field class="example-full-width">
+        <input matInput type="password" name="password2" formControlName="password2" placeholder="Wachtwoord nogmaals" required>
+      </mat-form-field>
+      <br>
+    <button class="btn" mat-raised-button type="submit">Registreren</button>
+    </form>
+  </div>
+</body>

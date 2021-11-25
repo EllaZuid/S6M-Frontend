@@ -1,2 +1,12 @@
+.btn2 {
+    background-color: black;
+    color: white;
+    float: right;
+    margin-right: 2%;
+}
 
-
+.btn3 {
+    background-color: black;
+    color: white;
+    margin-left: 45%;
+}
