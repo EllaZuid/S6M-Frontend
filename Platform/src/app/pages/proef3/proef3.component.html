@@ -5,7 +5,7 @@
     <h1>Proef 3-b</h1>
     <div class="wrapper">
         <p>Vul de punten in van het scoreformulier</p>
-        <form>
+        <form [formGroup]="threeBFrom" (ngSubmit)="SaveScoreForm()">
           <table>
             <tr>
               <th></th>

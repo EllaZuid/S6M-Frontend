@@ -9,6 +9,12 @@ import { Proef3Component } from './pages/proef3/proef3.component';
 import { Proef4Component } from './pages/proef4/proef4.component';
 import { Proef5Component } from './pages/proef5/proef5.component';
 import { Proef6Component } from './pages/proef6/proef6.component';
+import { HttpClientModule, HttpHeaders } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSelectModule } from '@angular/material/select';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -22,7 +28,14 @@ import { Proef6Component } from './pages/proef6/proef6.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatSelectModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

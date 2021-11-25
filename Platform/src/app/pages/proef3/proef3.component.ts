@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ScoreModel } from 'src/app/models/scoreModel';
+import { ProefService } from 'src/app/services/proef.service';
 
 @Component({
   selector: 'app-proef3',
@@ -143,7 +145,7 @@ export class Proef3Component implements OnInit {
 
   currentScore = new ScoreModel();
 
-  constructor() { }
+  constructor(private proefService: ProefService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -153,7 +155,14 @@ export class Proef3Component implements OnInit {
 
     this.GetInputForm();
 
-    console.log(this.currentScore.oneHP);
+    this.proefService.sendScore(this.currentScore).subscribe((result: any) => {
+      console.log(result);
+      this.router.navigate(['home']);
+
+    }, (error) => {
+      console.log('Scorecomponent zegt error');
+      console.log(error);
+    });
   }
 
   GetInputForm(){
