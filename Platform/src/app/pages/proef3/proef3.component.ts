@@ -155,7 +155,7 @@ export class Proef3Component implements OnInit {
 
     this.GetInputForm();
 
-    this.proefService.sendScore(this.currentScore).subscribe((result: any) => {
+    this.proefService.sendScore(this.currentScore).subscribe(result => {
       console.log(result);
       this.router.navigate(['home']);
 

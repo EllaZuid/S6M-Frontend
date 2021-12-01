@@ -70,7 +70,8 @@
             "headers": {
               "Acces-Control-Allow-Origin": "*",
               "Acces-Control-Allow-Methods": "POST, GET, OPTIONS, DELETE, PUT",
-              "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token"
+              "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token",
+              "Content-Type":  "application/json"
             }
           },
           "configurations": {
