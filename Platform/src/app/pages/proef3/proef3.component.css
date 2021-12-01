@@ -1,18 +1,16 @@
 table {
     border-collapse: collapse;
     width: 100%;
-  }
-  
+}
+
 td, th {
-  border: 1px solid black;
-  text-align: left;
-  padding: 8px;
+    border: 1px solid black;
+    text-align: left;
+    padding: 8px;
 }
 
 .btn2 {
-  background-color: black;
-  color: white;
-  float: right;
-  padding: 0.2rem;
-  border-radius: 0.3rem;
-}
+    background-color: black;
+    color: white;
+    float: right;
+} 
