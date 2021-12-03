@@ -5,6 +5,7 @@ import { LoginUserModel } from 'src/app/models/loginUserModel';
 import { AuthService } from 'src/app/services/auth.service';
 import { tokenModel } from 'src/app/models/tokenModel';
 import { JwtHelperService } from '@auth0/angular-jwt';
+import jwt_decode from 'jwt-decode';
 
 @Component({
   selector: 'app-login',
@@ -38,17 +39,16 @@ export class LoginComponent implements OnInit {
     this.authService.login(this.currentUser).subscribe((result: any) => {
       console.log(result);
 
-      const helper = new JwtHelperService();
-      var tokenString = JSON.stringify(result.token);
-      localStorage.setItem('Token', tokenString);
-      var decoded = helper.decodeToken(tokenString);
+      localStorage.setItem('Token', result.body.token);
+      const decoded = jwt_decode<LoginUserModel>(result.body.token);
       console.log(decoded);
 
       this.currentUserDecoded.id = decoded.id;
 
       localStorage.setItem('user', JSON.stringify(this.currentUserDecoded));
+      console.log(this.currentUserDecoded);
 
-      this.router.navigate(['timeline']);
+      this.router.navigate(['home']);
     }, (error: any) => {
       console.log('Authcomponent zegt error');
       console.log(error);

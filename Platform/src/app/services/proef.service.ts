@@ -17,9 +17,10 @@ export class ProefService {
   sendScore(proef: ScoreModel): Observable<ScoreModel>{
 
     const headers = {
-        'Content-Type':  'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json'
     };
+
     const body = JSON.stringify(proef);
 
     console.log('score formulier word verzonden...');

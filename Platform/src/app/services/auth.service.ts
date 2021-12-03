@@ -15,6 +15,11 @@ export class AuthService {
 
   login(userModel: LoginUserModel) {
     console.log('Attempting to connect.');
+
+    const headers = {
+      'Access-Control-Allow-Origin': '*'
+    };
+
     this.token = this.http.post(environment.link + '/auth/login', userModel, {observe: 'response'});
     console.log("token: " + this.token);
     return this.token;
@@ -23,6 +28,11 @@ export class AuthService {
 
   register(userModel: RegisterUserModel) {
     console.log('Attempting to connect.');
-    return this.http.post(environment.link + '/auth/register', userModel);
+
+    const headers = {
+      'Access-Control-Allow-Origin': '*'
+    };
+
+    return this.http.post(environment.link + '/auth/register', userModel, {'headers':headers});
   }
 }
