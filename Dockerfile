@@ -17,4 +17,5 @@ WORKDIR Platform/usr/src/app
 COPY Platform/package.json Platform/package-lock.json ./
 RUN npm install
 COPY . .
+RUN cd Platform
 RUN npm run build
