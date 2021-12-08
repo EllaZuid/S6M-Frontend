@@ -14,7 +14,7 @@
 FROM node:14.15-alpine AS build
 EXPOSE 4200
 WORKDIR Platform/usr/src/app
-COPY package.json package-lock.json ./
+COPY Platform/package.json package-lock.json ./
 RUN npm install
 COPY . .
 RUN npm run build
