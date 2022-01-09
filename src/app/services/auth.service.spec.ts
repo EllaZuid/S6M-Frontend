@@ -66,12 +66,12 @@ describe('AuthService', () => {
     }));
     spyOn(router, 'navigate');
 
-    component.loginForm.controls['username'].setValue('admin1');
-    component.loginForm.controls['password'].setValue('admin1');
+    component.loginForm.controls['username'].setValue('test1');
+    component.loginForm.controls['password'].setValue('test1');
     component.login();
 
-    userModel.uname = 'admin1';
-    userModel.password = 'admin1';
+    userModel.uname = 'test1';
+    userModel.password = 'test1';
 
     expect(service.login).toHaveBeenCalledWith(userModel);
     expect(router.navigate).toHaveBeenCalledWith(['index']);

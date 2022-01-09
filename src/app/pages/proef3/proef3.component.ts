@@ -151,12 +151,9 @@ export class Proef3Component implements OnInit {
   }
 
   SaveScoreForm(){
-    console.log(this.threeBFrom.getRawValue());
-
     this.GetInputForm();
 
     this.proefService.sendScore(this.currentScore).subscribe(result => {
-      console.log(result);
       this.router.navigate(['home']);
 
     }, (error) => {

@@ -42,18 +42,14 @@ export class RegisterComponent implements OnInit {
   }
 
   register() {
-    console.log(+ this.registerForm.getRawValue());
 
     this.currentUser.uname = this.registerForm.value.uname;
     this.currentUser.password = this.registerForm.value.password;
     this.currentUser.password2 = this.registerForm.value.password2;
     this.currentUser.email = this.registerForm.value.email;
 
-    console.log(this.currentUser);
-
     if(this.currentUser.password == this.currentUser.password2){
       this.authService.register(this.currentUser).subscribe((result: any) => {
-        console.log(result);
         this.router.navigate(['home']);
   
       }, (error) => {
