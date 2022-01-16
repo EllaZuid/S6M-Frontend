@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  link: 'http://localhost:9191'
+  linkDressuur: 'http://51.105.146.50:9002',
+  linkAuth: 'http://51.105.145.24:9003'
 };
 
 /*
